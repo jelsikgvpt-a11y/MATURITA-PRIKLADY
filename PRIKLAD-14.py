@@ -1,4 +1,5 @@
 subor = open("skok_do_dialky.txt", encoding="utf-8")
+
 krajiny = []
 pocet = []
 vitazi = []
@@ -6,6 +7,7 @@ najlepsi = 0
 
 for riadok in subor:
     udaje = riadok.split()
+
     meno = udaje[0]
     krajina = udaje[1]
 
@@ -17,7 +19,6 @@ for riadok in subor:
         pocet[cislo] += 1
 
     maximum = max(int(udaje[2]), int(udaje[3]), int(udaje[4]), int(udaje[5]), int(udaje[6]))
-
     if maximum > najlepsi:
         najlepsi = maximum
         vitazi = [meno]
@@ -25,8 +26,8 @@ for riadok in subor:
         vitazi.append(meno)
 
 print("Krajiny:", krajiny)
-for i in range (len(krajiny)):
+for i in range(len(krajiny)):
     print(krajiny[i], pocet[i])
 
-print("Vitaz:", vitazi)
-subor.close()
+print("Vitazi:", vitazi)
+
