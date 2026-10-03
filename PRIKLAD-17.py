@@ -1,25 +1,24 @@
-veta = input("Zadaj vetu: ")  
+veta = input("Zadaj mi vetu:")
 
-pocty = [0] * 10 
+pocet = [0]*10
 
-for znak in veta: 
-    if znak == " ":  
-        cislo = 0
+for znak in veta:
+    if znak == " ":
+        cislo = 0 
         opakovanie = 1
         vysledok = "0"
     else:
-        cislo = (ord(znak) - ord("A")) // 3 + 1 
-        opakovanie = (ord(znak) - ord("A")) % 3 + 1  
-        vysledok = str(cislo) * opakovanie  
+        cislo = (ord(znak)-ord("A")) //3 +1
+        opakovanie = (ord(znak)-ord("A")) %3 +1
+        vysledok = str(cislo)*opakovanie
 
-    print(vysledok, end=" ")  
-    pocty[cislo] += opakovanie  
+    print(vysledok, end = " ")
+    pocet[cislo] = opakovanie
+najviac = max(pocet)
 
-najviac = max(pocty)  
+print()
+print("Najcastejsie policko:", end =" ")
 
-print()  
-print("Najčastejšie políčko:", end=" ")
-
-for i in range(10):  
-    if pocty[i] == najviac:  
-        print(i, end=" ") 
+for i in range (10):
+    if pocet(i) == najviac:
+        print(i,)
