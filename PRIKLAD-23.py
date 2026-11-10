@@ -1,4 +1,4 @@
-klic = input("Kluc: ")
+kluc = input("Kluc: ")
 volba = input("Sifrovat alebo desifrovat? ")
 
 vstup = open("vstupny_text.txt", "r")
@@ -10,7 +10,7 @@ for riadok in vstup:
 
     for znak in riadok:
         if "a" <= znak <= "z":
-            posun = ord(klic[i % len(klic)]) - ord("a") + 1
+            posun = ord(kluc[i % len(kluc)]) - ord("a") + 1
 
             if volba == "desifrovat":
                 posun = -posun
